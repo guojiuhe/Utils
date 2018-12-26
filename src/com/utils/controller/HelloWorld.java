@@ -6,7 +6,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -19,9 +18,9 @@ public class HelloWorld {
 	
 	xml配置：
 	<!--方式一-->
-	<bean id = "helloworld" class="com.game.controller.HelloWorld"></bean>
+	<bean id = "helloworld" class="com.utils.controller.HelloWorld"></bean>
 	<!--方式二-->(更简洁)
-	<context:component-scan base-package="com.game.controller"/>
+	<context:component-scan base-package="com.utils.controller"/>
 	
 	自动注入,不需要setter,getter
 	@Autowired: 
@@ -29,21 +28,12 @@ public class HelloWorld {
 	@Resource: 
 		byName
 	 */
-    @RequestMapping("/helloworld")  // 此处控制浏览器里访问路径 具体为：/SpringMvc/helloworld
+    @RequestMapping("/helloworld")  // 此处控制浏览器里访问路径 具体为：/SpringMvcUtils/helloworld
     public void helloWorld(HttpServletRequest request, HttpServletResponse response) throws IOException {
         
         //输出字符串
         response.getWriter().append("hello world");
     
     }
-
-    @RequestMapping("/helloworld1")  // 此处控制浏览器里访问路径 具体为：/SpringMvc/helloworld
-    public void helloWorld1(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        
-        //输出字符串
-        response.getWriter().append("hello world1");
-    
-    }
-    
- 
+     
 }

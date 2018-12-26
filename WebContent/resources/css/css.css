@@ -1,0 +1,56 @@
+ul {
+	list-style: none; /* 去掉ul前面的符号 */
+	margin: 0px; /* 与外界元素的距离为0 */
+	padding: 0px; /* 与内部元素的距离为0 */
+	width: auto; /* 宽度根据元素内容调整 */
+}
+
+ul li {
+	float: left; /* 向左漂移，将竖排变为横排 */
+	display: inline-block;
+	width: 98px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+}
+
+ul li a {
+	text-decoration: none; /* 不显示超链接下划线 */
+	font-size: 20px;
+}
+/* 未访问的链接 */
+a:link {
+	/*color: #06F;
+	text-decoration: none;*/
+} 
+/* 已访问的链接 */ 
+a:visited {
+	/*color: #999;
+	text-decoration: line-through;*/
+}
+/* 鼠标移动到链接上 */
+a:hover {
+	color: #c1953f;
+	text-decoration: underline;
+} 
+/* 选定的链接 */ 
+a:active {
+	/*color: #F0F;*/
+}
+
+
+table th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #dedede;
+}
+
+table td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #ffffff;
+}

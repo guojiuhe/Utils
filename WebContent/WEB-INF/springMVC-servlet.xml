@@ -14,7 +14,18 @@ xsi:schemaLocation="
   http://www.springframework.org/schema/mvc
   http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd">
   
- <!-- 自动扫描指定包及其子包下的所有Bean类 -->
- <context:component-scan base-package="com.game.controller"/>
-
+  	<mvc:annotation-driven/>
+ 	<!-- 自动扫描指定包及其子包下的所有Bean类 -->
+ 	<context:component-scan base-package="com.utils.controller"/>
+ 	<context:component-scan base-package="com.test.controller"/>
+	
+	<!-- don't handle the static resource -->
+	<mvc:default-servlet-handler/>
+	
+	<!-- 视图解析器 -->
+ 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    	<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+    	<property name="prefix" value="/WEB-INF/view/"/>
+    	<property name="suffix" value=".jsp"/>
+	</bean>
 </beans>
