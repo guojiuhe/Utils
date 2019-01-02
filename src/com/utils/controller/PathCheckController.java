@@ -5,12 +5,51 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/mvc")
 public class PathCheckController {
 
 	@RequestMapping("/index")
 	public String pathIndex(ModelMap model) {
 		return "index";
+	}
+	
+	@RequestMapping("/home")
+	public String pathHome(ModelMap model) {
+		return "home";
+	}
+
+	@RequestMapping("/home/Java")
+	public String pathHomeJava(ModelMap model) {
+		return "homePage/Java";
+	}
+	
+	@RequestMapping("/home/.Net")
+	public String pathHomeNet(ModelMap model) {
+		return "homePage/Net";
+	}
+	
+	@RequestMapping("/home/HtmlCss")
+	public String pathHomeHtmlcss(ModelMap model) {
+		return "homePage/HtmlCss";
+	}
+
+	@RequestMapping("/home/Jquery")
+	public String pathHomeJquery(ModelMap model) {
+		return "homePage/Jquery";
+	}
+	
+	@RequestMapping("/home/AngularJs")
+	public String pathHomeAngularJs(ModelMap model) {
+		return "homePage/AngularJs";
+	}
+	
+	@RequestMapping("/home/Sql")
+	public String pathHomeSql(ModelMap model) {
+		return "homePage/sql";
+	}
+
+	@RequestMapping("/home/Others")
+	public String pathHomeOthers(ModelMap model) {
+		return "homePage/Others";
 	}
 	
 	@RequestMapping("/git")
@@ -24,13 +63,4 @@ public class PathCheckController {
 		return "style_js_css";
 	}
 	
-	@RequestMapping("/java")
-	public String pathJava(ModelMap model) {
-		return "java";
-	}
-	
-	@RequestMapping("/leftMenuPage1")
-	public String pathleftMenuPage1(ModelMap model) {
-		return "leftMenuPage1";
-	}
 }

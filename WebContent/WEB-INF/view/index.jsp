@@ -8,31 +8,29 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SpringMvcUtils</title>
-<script type="text/javascript" src="https://cdn.staticfile.org/angular.js/1.4.6/angular.min.js"></script>
-<script type="text/javascript" src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 <link type="text/css" rel="styleSheet"  href="<%=basePath%>/resources/css/css.css" />
+<link type="text/css" rel="styleSheet"  href="<%=basePath%>/resources/bootstrap-4.0.0-dist/css/bootstrap.css" />
+<link rel="shortcut icon" href="#" />
+<script type="text/javascript" src="https://cdn.staticfile.org/angular.js/1.4.6/angular.min.js"></script>
+<script type="text/javascript" src="<%=basePath%>/js/jquery-1.5.1.js"></script>
+<script type="text/javascript" src="<%=basePath%>/resources/bootstrap-4.0.0-dist/js/tether.js"></script>
+<script type="text/javascript" src="<%=basePath%>/resources/bootstrap-4.0.0-dist/js/bootstrap.js"></script>
 <body>
-	<div id="c_main">
-		<jsp:include page="head.jsp"></jsp:include>
-		<div id="c_con">
-			<div class="con_left">
-				<iframe src="<%=basePath%>/mvc/leftMenuPage1" align="middle" id="iframepage1"
-					width="100%" height="500px" frameborder="0"
-					marginheight="0" marginwidth="0"></iframe>	
-			</div>
-	        <div class="con_right">
-				<iframe src="<%=basePath%>/mvc/git" align="middle" id="iframepage2"
-					width="1000px" height="500px" frameborder="0" scrolling="no"
-					marginheight="0" marginwidth="0"></iframe>
-			</div>
-		</div>
-	</div>
+<jsp:include page="head.jsp"></jsp:include>
+	<iframe src="<%=basePath%>/home" align="middle"
+		id="iframe-page-content" width="100%" height="100%" frameborder="0"
+		marginheight="0" marginwidth="0"></iframe>
 </body>
+
 <style>
 body {
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 #c_con {
     width: 100%;
@@ -64,4 +62,14 @@ body {
     float:left;
 }
 </style>
+
+<script type="text/javascript">
+$(function() {
+	var height=document.documentElement.clientHeight - 46;
+	document.getElementById('iframe-page-content').style.height=height+'px';
+});
+var menuClick = function(menuUrl) {
+	$("#iframe-page-content").attr("src","<%=basePath%>" + "/" + menuUrl);
+};
+</script>
 </html>
