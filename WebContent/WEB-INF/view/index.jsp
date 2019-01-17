@@ -15,7 +15,7 @@
 <link type="text/css" rel="styleSheet"  href="<%=basePath%>/resources/bootstrap-4.0.0-dist/css/bootstrap.css" />
 <link rel="shortcut icon" href="#" />
 <script type="text/javascript" src="https://cdn.staticfile.org/angular.js/1.4.6/angular.min.js"></script>
-<script type="text/javascript" src="<%=basePath%>/js/jquery-1.5.1.js"></script>
+<script type="text/javascript" src="<%=basePath%>/resources/js/jquery-1.5.1.js"></script>
 <script type="text/javascript" src="<%=basePath%>/resources/bootstrap-4.0.0-dist/js/tether.js"></script>
 <script type="text/javascript" src="<%=basePath%>/resources/bootstrap-4.0.0-dist/js/bootstrap.js"></script>
 <body>

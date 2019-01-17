@@ -9,7 +9,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Git 常用操作</title>
-<script type="text/javascript" src="<%=basePath%>/js/jquery-1.5.1.js"></script>
+<script type="text/javascript" src="<%=basePath%>/resources/js/jquery-1.5.1.js"></script>
 <script src="https://cdn.staticfile.org/angular.js/1.4.6/angular.min.js"></script>
 <script type="text/javascript" src="<%=basePath%>/resources/js/common.js"></script>
 <link type="text/css" rel="styleSheet"  href="<%=basePath%>/resources/css/css.css" />
